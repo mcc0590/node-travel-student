@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>
+			My African Adventure!
+		</title>
+
+		<link rel="stylesheet" type="text/css" href="/stylesheets/stylesheet.css">
+
+	</head>
+
+	<body>
+	
+			<h1>My African Adventure</h1>
+    
+    <%
+  
+      for (var i = 0; i< places.length; i++) {
+        var place = places[i];
+    %>
+    <div id="capetown">
+
+			<h2> <%=place.name%>, <em> <%=place.country%> </em></h2>
+
+			<img src="/images/<%=place.image_name%>" />
+
+			<p> <%=place.description%> </p>
+
+			<h3> Rating <%=place.rating%> (out of 5) </h3>
+  
+		</div>
+    <%
+      }
+    %>
+
+</body>
+
+</html>
